@@ -67,7 +67,7 @@ public class RadioTest {
 
         rad.setChoiceStation(10);
 
-        int expected = 9;
+        int expected = 0;
         int actual = rad.getRadioStation();
         assertEquals(expected, actual);
     }

@@ -31,7 +31,7 @@ public class Radio {
     }
 
 
-    public int getRadioStation(int radioStation){
+    public int getRadioStation(){
         return radioStation;
     }
 
