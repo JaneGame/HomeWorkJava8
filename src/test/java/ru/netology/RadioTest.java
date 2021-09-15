@@ -14,7 +14,7 @@ public class RadioTest {
     void RadioTestNext() {
 
         int expected = 6;
-        int actual = rad.setStationNext(5);
+        int actual = rad.StationNext(5);
         assertEquals(expected, actual);
     }
 
@@ -22,7 +22,7 @@ public class RadioTest {
     void RadioTestNextMax() {
 
         int expected = 0;
-        int actual = rad.setStationNext(9);
+        int actual = rad.StationNext(9);
         assertEquals(expected, actual);
     }
 
@@ -30,7 +30,7 @@ public class RadioTest {
     void RadioTestPrev() {
 
         int expected = 4;
-        int actual = rad.setStationPrev(5);
+        int actual = rad.StationPrev(5);
         assertEquals(expected, actual);
     }
 
@@ -38,31 +38,37 @@ public class RadioTest {
     void RadioTestPrevMin() {
 
         int expected = 9;
-        int actual = rad.setStationPrev(0);
+        int actual = rad.StationPrev(0);
         assertEquals(expected, actual);
     }
 
     @Test
     void RadioTestChoice() {
 
+       rad.setChoiceStation(5);
+
+
         int expected = 5;
-        int actual = rad.choiceStation(5);
+        int actual = rad.getRadioStation();
         assertEquals(expected, actual);
     }
 
     @Test
     void RadioTestChoiceMin() {
+        rad.setChoiceStation(-1);
 
         int expected = 0;
-        int actual = rad.choiceStation(-5);
+        int actual = rad.getRadioStation();
         assertEquals(expected, actual);
     }
 
     @Test
     void RadioTestChoiceMax() {
 
-        int expected = 0;
-        int actual = rad.choiceStation(10);
+        rad.setChoiceStation(10);
+
+        int expected = 9;
+        int actual = rad.getRadioStation();
         assertEquals(expected, actual);
     }
 
@@ -70,7 +76,7 @@ public class RadioTest {
     void VolumeTestPlus() {
 
         int expected = 6;
-        int actual = rad.setVolumePlus(5);
+        int actual = rad.VolumePlus(5);
         assertEquals(expected, actual);
     }
 
@@ -78,7 +84,7 @@ public class RadioTest {
     void VolumeTestPlusMax() {
 
         int expected = 10;
-        int actual = rad.setVolumePlus(10);
+        int actual = rad.VolumePlus(10);
         assertEquals(expected, actual);
     }
 
@@ -86,7 +92,7 @@ public class RadioTest {
     void VolumeTestMinus() {
 
         int expected = 4;
-        int actual = rad.setVolumeMinus(5);
+        int actual = rad.VolumeMinus(5);
         assertEquals(expected, actual);
     }
 
@@ -94,7 +100,7 @@ public class RadioTest {
     void VolumeTestMinusMin() {
 
         int expected = 0;
-        int actual = rad.setVolumeMinus(0);
+        int actual = rad.VolumeMinus(0);
         assertEquals(expected, actual);
     }
 
