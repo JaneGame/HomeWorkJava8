@@ -11,41 +11,41 @@ public class RadioTest {
     Radio rad = new Radio();
 
     @Test
-    void RadioTestNext() {
+    void radioTestNext() {
 
         int expected = 6;
-        int actual = rad.StationNext(5);
+        int actual = rad.stationNext(5);
         assertEquals(expected, actual);
     }
 
     @Test
-    void RadioTestNextMax() {
+    void radioTestNextMax() {
 
         int expected = 0;
-        int actual = rad.StationNext(9);
+        int actual = rad.stationNext(9);
         assertEquals(expected, actual);
     }
 
     @Test
-    void RadioTestPrev() {
+    void radioTestPrev() {
 
         int expected = 4;
-        int actual = rad.StationPrev(5);
+        int actual = rad.stationPrev(5);
         assertEquals(expected, actual);
     }
 
     @Test
-    void RadioTestPrevMin() {
+    void radioTestPrevMin() {
 
         int expected = 9;
-        int actual = rad.StationPrev(0);
+        int actual = rad.stationPrev(0);
         assertEquals(expected, actual);
     }
 
     @Test
-    void RadioTestChoice() {
+    void radioTestChoice() {
 
-       rad.setChoiceStation(5);
+        rad.setChoiceStation(5);
 
 
         int expected = 5;
@@ -54,7 +54,7 @@ public class RadioTest {
     }
 
     @Test
-    void RadioTestChoiceMin() {
+    void radioTestChoiceMin() {
         rad.setChoiceStation(-1);
 
         int expected = 0;
@@ -63,7 +63,7 @@ public class RadioTest {
     }
 
     @Test
-    void RadioTestChoiceMax() {
+    void radioTestChoiceMax() {
 
         rad.setChoiceStation(10);
 
@@ -73,34 +73,34 @@ public class RadioTest {
     }
 
     @Test
-    void VolumeTestPlus() {
+    void volumeTestPlus() {
 
         int expected = 6;
-        int actual = rad.VolumePlus(5);
+        int actual = rad.volumePlus(5);
         assertEquals(expected, actual);
     }
 
     @Test
-    void VolumeTestPlusMax() {
+    void volumeTestPlusMax() {
 
         int expected = 10;
-        int actual = rad.VolumePlus(10);
+        int actual = rad.volumePlus(10);
         assertEquals(expected, actual);
     }
 
     @Test
-    void VolumeTestMinus() {
+    void volumeTestMinus() {
 
         int expected = 4;
-        int actual = rad.VolumeMinus(5);
+        int actual = rad.volumeMinus(5);
         assertEquals(expected, actual);
     }
 
     @Test
-    void VolumeTestMinusMin() {
+    void volumeTestMinusMin() {
 
         int expected = 0;
-        int actual = rad.VolumeMinus(0);
+        int actual = rad.volumeMinus(0);
         assertEquals(expected, actual);
     }
 

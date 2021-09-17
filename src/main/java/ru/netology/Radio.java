@@ -6,48 +6,47 @@ public class Radio {
     int maxStation = 9;
     int minStation = 0;
 
-    public int StationNext(int radioStation){
-        if (radioStation==9)
+    public int stationNext(int radioStation) {
+        if (radioStation == 9)
             radioStation = 0;
-        else radioStation=radioStation+1;
+        else radioStation = radioStation + 1;
         return radioStation;
     }
 
-    public int StationPrev(int radioStation){
-        if (radioStation==0)
+    public int stationPrev(int radioStation) {
+        if (radioStation == 0)
             radioStation = 9;
-        else radioStation=radioStation-1;
+        else radioStation = radioStation - 1;
         return radioStation;
     }
 
-    public void setChoiceStation(int radioStation){
-        if (radioStation>maxStation){
+    public void setChoiceStation(int radioStation) {
+        if (radioStation > maxStation) {
             return;
         }
-        if (radioStation<minStation) {
+        if (radioStation < minStation) {
             return;
         }
-        this.radioStation=radioStation;
+        this.radioStation = radioStation;
     }
 
 
-    public int getRadioStation(){
+    public int getRadioStation() {
         return radioStation;
     }
 
 
-
-    public int VolumePlus(int volume){
-        if (volume==10)
+    public int volumePlus(int volume) {
+        if (volume == 10)
             volume = 10;
-        else volume=volume+1;
+        else volume = volume + 1;
         return volume;
     }
 
-    public int VolumeMinus(int volume){
-        if (volume==0)
+    public int volumeMinus(int volume) {
+        if (volume == 0)
             volume = 0;
-        else volume=volume-1;
+        else volume = volume - 1;
         return volume;
     }
 
