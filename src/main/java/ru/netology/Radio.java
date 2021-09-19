@@ -3,21 +3,23 @@ package ru.netology;
 public class Radio {
     private int radioStation;
     private int volume;
-    int maxStation = 9;
-    int minStation = 0;
+    private int maxStation = 9;
+    private int minStation = 0;
+    private int maxVolume = 10;
+    private int minVolume = 0;
 
-    public int stationNext(int radioStation) {
-        if (radioStation == 9)
-            radioStation = 0;
-        else radioStation = radioStation + 1;
-        return radioStation;
+    public void stationNext() {
+        if (radioStation == maxStation)
+        {radioStation = minStation;}
+        else {radioStation = radioStation + 1;}
+        return;
     }
 
-    public int stationPrev(int radioStation) {
-        if (radioStation == 0)
-            radioStation = 9;
-        else radioStation = radioStation - 1;
-        return radioStation;
+    public void stationPrev() {
+        if (radioStation == minStation)
+        {radioStation = maxStation;}
+        else {radioStation = radioStation - 1;}
+        return;
     }
 
     public void setChoiceStation(int radioStation) {
@@ -35,19 +37,33 @@ public class Radio {
         return radioStation;
     }
 
+    public void setVolume(int volume) {
+        if (volume > maxVolume) {
+            return;
+        }
+        if (volume < minVolume) {
+            return;
+        }
+        this.volume = volume;
+    }
 
-    public int volumePlus(int volume) {
-        if (volume == 10)
-            volume = 10;
-        else volume = volume + 1;
+
+    public int getVolume() {
         return volume;
     }
 
-    public int volumeMinus(int volume) {
-        if (volume == 0)
-            volume = 0;
-        else volume = volume - 1;
-        return volume;
+    public void volumePlus() {
+        if (volume == maxVolume)
+        {volume = maxVolume;}
+        else {volume = volume + 1;}
+        return;
+    }
+
+    public void volumeMinus() {
+        if (volume == minVolume)
+        {volume = minVolume;}
+        else {volume = volume - 1;}
+        return;
     }
 
 
